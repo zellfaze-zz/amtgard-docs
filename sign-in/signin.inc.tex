@@ -1,8 +1,11 @@
+\definecolor{Gray}{gray}{0.85}
+\newcolumntype{a}{>{\columncolor{Gray}}l}
+
 \newcommand{\specialcell}[2][c]{%
   \begin{tabular}[#1]{@{}l@{}}#2\end{tabular}}
 
 \newcommand{\rotaten}[1]{
-	\rotatebox[origin=c]{90}{~ {#1} ~}
+	\rotatebox[origin=l]{90}{{#1} ~}
 }
 
 \newcommand{\blankrow}[1]{
@@ -10,17 +13,17 @@
 	\multicolumn{1}{l|}{}     &
 	\multicolumn{1}{l|}{}     &
 	\multicolumn{1}{l|}{}     &
+	\multicolumn{1}{a|}{}     &
 	\multicolumn{1}{l|}{}     &
+	\multicolumn{1}{a|}{}     &
 	\multicolumn{1}{l|}{}     &
+	\multicolumn{1}{a|}{}     &
 	\multicolumn{1}{l|}{}     &
+	\multicolumn{1}{a|}{}     &
 	\multicolumn{1}{l|}{}     &
+	\multicolumn{1}{a|}{}     &
 	\multicolumn{1}{l|}{}     &
-	\multicolumn{1}{l|}{}     &
-	\multicolumn{1}{l|}{}     &
-	\multicolumn{1}{l|}{}     &
-	\multicolumn{1}{l|}{}     &
-	\multicolumn{1}{l|}{}     &
-	\multicolumn{1}{l|}{}     &
+	\multicolumn{1}{a|}{}     &
 	\multicolumn{1}{l|}{}     \\
 	\hline
 }
@@ -29,8 +32,17 @@
 	\multicolumn{1}{l|}{\rotaten{#1}} &
 }
 
+\newcommand{\classcelle}[1]{
+	\multicolumn{1}{a|}{\rotaten{#1}} &
+}
+
 \newcommand{\classcellend}[1]{
 	\multicolumn{1}{l|}{\rotaten{#1}} \\
+  \hline
+}
+
+\newcommand{\classcellende}[1]{
+	\multicolumn{1}{a|}{\rotaten{#1}} \\
   \hline
 }
 
